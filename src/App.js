@@ -8,7 +8,7 @@ function App() {
   const [weather, setWeather] = useState('');
   const [weatherData, setWeatherData] = useState({});
 
-const url =`http://dataservice.accuweather.com/locations/v1/cities/search?apikey=AWMlOG74vJd9NQie58OY748jTSAm20qC&q=${location}&language=en-us&details=true`;
+const url =`http://dataservice.accuweather.com/locations/v1/cities/search?apikey=x8RxcDrWaJK5hmFPAAsVtUncpfusR4bI&q=${location}&language=en-us&details=true`;
 
 const search_location = (event) => {
   event.preventDefault();
@@ -25,7 +25,7 @@ if(!data) {
   return null;
 }
 
-const weather_url = `http://dataservice.accuweather.com/forecasts/v1/daily/1day/${weather}?apikey=AWMlOG74vJd9NQie58OY748jTSAm20qC&metric=true`;
+const weather_url = `http://dataservice.accuweather.com/forecasts/v1/daily/1day/${weather}?apikey=x8RxcDrWaJK5hmFPAAsVtUncpfusR4bI&metric=true`;
   const search_weather = async (event) => {
     event.preventDefault();
     axios.get(weather_url).then((response) => {
